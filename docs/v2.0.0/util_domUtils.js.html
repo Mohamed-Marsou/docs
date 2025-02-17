@@ -1,0 +1,337 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>util/domUtils.js</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"FooDoc","systemSummary":"A Bootstrap and Handlebars based template for JSDoc3.","systemLogo":"","systemColor":"","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"FooDoc Copyright © 2016 The contributors to the JSDoc3 and FooDoc projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"default":{"includeDate":false,"outputSourceFiles":false,"outputSourcePath":false}};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					FooDoc
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#app">app</a></li>
+											<li><a href="global.html#checkElement">checkElement</a></li>
+											<li><a href="global.html#checkElementBySelector">checkElementBySelector</a></li>
+											<li><a href="global.html#checkElementByXpath">checkElementByXpath</a></li>
+											<li><a href="global.html#clearInput">clearInput</a></li>
+											<li><a href="global.html#clearInputBySelector">clearInputBySelector</a></li>
+											<li><a href="global.html#clearInputByXpath">clearInputByXpath</a></li>
+											<li><a href="global.html#clickElement">clickElement</a></li>
+											<li><a href="global.html#clickElementBySelector">clickElementBySelector</a></li>
+											<li><a href="global.html#clickElementByXpath">clickElementByXpath</a></li>
+											<li><a href="global.html#express">express</a></li>
+											<li><a href="global.html#fetchDOM">fetchDOM</a></li>
+											<li><a href="global.html#getAttribute">getAttribute</a></li>
+											<li><a href="global.html#getElement">getElement</a></li>
+											<li><a href="global.html#handleGmailNavigation">handleGmailNavigation</a></li>
+											<li><a href="global.html#handleHotmailNavigation">handleHotmailNavigation</a></li>
+											<li><a href="global.html#keyPress">keyPress</a></li>
+											<li><a href="global.html#PORT">PORT</a></li>
+											<li><a href="global.html#randomScroll">randomScroll</a></li>
+											<li><a href="global.html#scrollToBottomPage">scrollToBottomPage</a></li>
+											<li><a href="global.html#scrollToElement">scrollToElement</a></li>
+											<li><a href="global.html#selectOption">selectOption</a></li>
+											<li><a href="global.html#typeText">typeText</a></li>
+											<li><a href="global.html#typeTextBySelector">typeTextBySelector</a></li>
+											<li><a href="global.html#typeTextByXpath">typeTextByXpath</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="Helpers.html">Helpers</a></li>
+											<li><a href="interaction.html">interaction</a></li>
+											<li><a href="Util.html">Util</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">util/domUtils.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * @namespace Util
+ */
+
+module.exports = (i, utilities) => {
+    const { handleError, types } = utilities;
+    const getPage = () => utilities.page;
+
+    return {
+        /**
+         * Executes a given JavaScript callback in the context of the specified page.
+         * 
+         * This allows users to run arbitrary JavaScript code on the webpage 
+         * represented by the Puppeteer `page` object. It captures the result of the 
+         * callback execution and handles any errors that may occur during the process.
+         * 
+         * @param {Function} callback       - The JavaScript to execute.
+         * @param {Array} arg               - Array of element to work with inside evaluate function.
+         * @returns {Promise&lt;*>}            - Resolves to the result of the callback, or null if undefined or an error occurs.
+         */
+        fetchDOM: async (callback, ...args) => {
+            try {
+                const page = getPage();
+                const result = await page.evaluate(callback, ...args);
+                return result !== undefined ? result : null;
+            } catch (error) {
+                handleError(i, error);
+            }
+        },
+
+        /**
+         * Checks if a specified element by Xpath exists on the page.
+         *
+         * @param {string} xpathExpression  - The Xpath selector of the element.
+         * @returns {Boolean}               - Resolves to true if the element exists on the page, otherwise false.
+         * @throws {Error}                  - Throws an error if the elementInfo is invalid.
+         */
+        checkElementByXpath: async (xpathExpression) => {
+            try {
+                return await utilities.checkElement({selector: xpathExpression, type: types.xpath});
+            } catch (error) {
+                const type = types.xpath;
+                handleError(i, error, null, { xpathExpression, type });
+            }
+        },
+
+        /**
+         * Checks if a specified element by Selector exists on the page.
+         *
+         * @param {string} selectorExpression   - The Selector selector of the element.
+         * @returns {Boolean}          - Resolves to true if the element exists on the page, otherwise false.
+         * @throws {Error}                      - Throws an error if the elementInfo is invalid.
+         */
+        checkElementBySelector: async (selectorExpression) => {
+            try {
+                return await utilities.checkElement({selector: selectorExpression, type: types.selector});
+            } catch (error) {
+                const type = types.selector;
+                handleError(i, error, null, { selectorExpression, type });
+            }
+        },
+
+        /**
+         * Checks if a specified element exists on the page.
+         *
+         * @param {string} selector         - The Selector or XPath selector of the element.
+         * @param {string} [type = 'selector']   - The type of the selector ('selector' or 'xpath').
+         * @returns {Promise&lt;boolean>}      - Resolves to true if the element exists on the page, otherwise false.
+         * @throws {Error}                  - Throws an error if the elementInfo is invalid.
+         */
+        checkElement: async ({ selector, type = 'selector' }) => {
+            try {
+                const page = getPage();
+                let exists = false;
+
+                if (type == types.selector)
+                    exists = await page.$(selector) !== null;
+
+                else if (type == types.xpath) {
+                    // exists = (await page.$x(selector)).length > 0;
+                    exists = await page.evaluate((xpath) => {
+                        const result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+                        return result.singleNodeValue;
+                    }, selector) !== null;
+                }
+
+                else
+                    throw new Error(`Unsupported selector type: ${type}. Expected 'selector' or 'xpath'.`);
+
+                return exists;
+            } catch (error) {
+                handleError(i, error, null, { selector, type });
+            }
+        },
+
+        /**
+         * Retrieves an element from the page based on a specified selector and type.
+         *
+         * @param {string} selector          - The selector of the element.
+         * @param {string} [type = 'selector']    - The type of the selector ('selector', 'xpath', 'id', 'class').
+         * @returns {Promise&lt;Element>|null}  - Resolves to the element if found, otherwise null.
+         * @throws {Error}                   - Throws an error if the selector type is unsupported.
+         */
+        getElement: async ({ selector, type = 'selector' }, frame = null) => {
+            try {
+                const page = frame ?? getPage();
+                let element;
+
+                switch (type) {
+                    case 'id':
+                        element = await page.$(`[id="${selector}"]`);
+                        break;
+                    case 'selector':
+                        element = await page.$(selector);
+                        break;
+                    case 'xpath':
+                        const elementHandle = await page.evaluateHandle((xpath) => {
+                            const result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+                            return result.singleNodeValue;
+                        }, selector);
+                        element = elementHandle.asElement();
+                        break;
+                    case 'class':
+                        element = await page.$(`.${selector}`);
+                        break;
+                    case 'allSelector':
+                        element = await page.$$(selector);
+                        break;
+                    case 'allXpath':
+                        const elements = await page.evaluateHandle((xpath) => {
+                            const results = [];
+                            const iterator = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+                            let node = iterator.iterateNext();
+                            while (node) {
+                                results.push(node.outerHTML); // Or any other property you need
+                                node = iterator.iterateNext();
+                            }
+                            return results;
+                        }, selector);
+
+                        // Convert DOM nodes to Puppeteer ElementHandles
+                        element = await elements.evaluate((nodes) => 
+                            nodes.map(node => node)
+                        );
+
+                        element = elements;
+                        break;
+                    default:
+                        throw new Error(`Unsupported selector type: ${type}.`);
+                }
+
+                return element || null;
+            } catch (error) {
+                handleError(i, error, null, { selector, type });
+            }
+        },
+
+        /**
+         * Retrieves a specified attribute from an element on the page.
+         *
+         * @param {string} selector         - The Selector or XPath selector of the element.
+         * @param {string} [type = 'selector']   - The type of the selector ('selector', 'xpath', 'id', or 'class').
+         * @param {string} attribute        - The name of the attribute to retrieve ('name', 'value', 'href', 'innerText', or 'innerHTML') or custom attribute.
+         * @returns {Promise&lt;string|null>}  - Resolves to the value of the specified attribute or null if not found.
+         * @throws {Error}                  - Throws an error if the elementInfo is invalid or the attribute is unsupported.
+         */
+        getAttribute: async ({ selector, type = 'selector' }, attribute) => {
+            try {
+                const element = await utilities.getElement({ selector, type });
+                if (!element) {
+                    throw new Error(`No element found with selector: ${selector}`);
+                }
+
+                let result;
+                switch (attribute) {
+                    case 'name':
+                        result = await element.evaluate(el => el?.name || null);
+                        break;
+                    case 'value':
+                        result = await element.evaluate(el => el?.value || null);
+                        break;
+                    case 'href':
+                        result = await element.evaluate(el => el?.href || null);
+                        break;
+                    case 'text':
+                        result = await element.evaluate(el => el?.innerText || el.textContent || null);
+                        break;
+                    case 'html':
+                        result = await element.evaluate(el => el?.innerHTML || null);
+                        break;
+                    default:
+                        result = await element.evaluate((el, attr) => el?.getAttribute(attr) || null, attribute);
+                }
+
+                return result;
+            } catch (error) {
+                handleError(i, error, null, { selector, type, attribute });
+            }
+        },
+    };
+};
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">FooDoc Copyright © 2016 The contributors to the JSDoc3 and FooDoc projects.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on 13th Feb 2025 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:source.tmpl.hbs -->
