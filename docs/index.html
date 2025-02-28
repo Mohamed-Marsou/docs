@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation Versions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        h1 { color: #333; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #007bff; font-size: 18px; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <title>Cloud Marketing Hub DOCS</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CMH Documentation - Comprehensive project documentation ">
+    <meta name="keywords" content="CMH, documentation, project docs, search, dark mode">
+    <meta name="author" content="CMH Team">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="CMH DOCS">
+    <meta property="og:description" content="Explore detailed documentation for all CMH project versions.">
+    <meta property="og:image" content="./assets/images/social-preview.png">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/index.css" id="themeStylesheet">
+    <link rel="stylesheet" href="" id="lightModeStylesheet">
+
+    <!-- JavaScript Files -->
+    <script src="./assets/js/main.js" defer></script>
 </head>
+
 <body>
-    <h1>Welcome to the Documentation</h1>
-    <p>Select a version below:</p>
-    <ul>
-        <li><a href="v1.0.0/index.html">Version 1.0.0</a></li>
-        <li><a href="v2.0.0/index.html">Version 2.0.0</a></li>
-    </ul>
-    <p>This repository hosts the documentation for different versions of our project.</p>
+    <nav>
+        <div class="nav-left">
+            <a href="/">
+                <img src="./assets/images/Logo_CMH.png" alt="CMH Logo" class="logo">
+                <span>COULD MARKETING HUB</span>
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <!-- Dark Mode Toggle Icon -->
+            <img src="./assets/images/light-mode.png" alt="Dark/light Mode Toggle" id="darkModeToggle">
+        </div>
+    </nav>
+
+    <section>
+        <div class="search">
+            <h1>Welcome to Cloud Marketing Hub Documentation</h1>
+            <p>
+                Use the search bar to quickly find information across <a href="#versions">all versions</a>,
+                or explore specific documentation by selecting a version from the links below.
+
+                Our documentation offers clear, concise solutions to support your needs.
+                Stay informed about the latest updates and enhancements, and make the most of Cloud Marketing Hub's
+                powerful features. Simply choose a version below and start exploring!
+            </p>
+
+            <div class="nav-center">
+                <input type="text" id="searchInput" placeholder="Search documentation...">
+                <button id="searchBtn">
+                    <img src="./assets/images/icons8-search-100.png" alt="search">
+                </button>
+                <div class="search-result"></div>
+            </div>
+
+        </div>
+
+        <div class="image">
+            <img src="./assets/images/Problem solving-bro.png" alt="Hero">
+        </div>
+
+        <div class="versions-box" id="versions">
+            <h2>Browse All Versions</h2>
+            <!-- Version Boxes for Project Documentation -->
+            <!-- To add a new version, copy and paste the entire 'box' div below -->
+            <!-- Update the version number in both the 'a' tag and the displayed text -->
+            <!-- Ensure the 'href' link points to the correct version folder, e.g., './vX.X.X/index.html' -->
+
+            <div class="box">
+                <div>
+                    <img src="./assets/images/icons8-version.png" alt="version">
+                </div>
+                <a href="./v1.0.0/index.html">
+                    Project Documentation V1.0.0
+                </a>
+                <p>
+                    Explore detailed guides for this version.
+                    Stay informed and make the most of Cloud Marketing Hub's powerful features.
+                </p>
+            </div>
+
+            <div class="box">
+                <div>
+                    <img src="./assets/images/icons8-version.png" alt="version">
+                </div>
+                <a href="./v2.0.0/index.html">
+                    Project Documentation V2.0.0
+                </a>
+                <p>
+                    Explore detailed guides for this version.
+                    Stay informed and make the most of Cloud Marketing Hub's powerful features.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy;2025 <span class="animated-gradient">Cloud Marketing Hub</span>. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

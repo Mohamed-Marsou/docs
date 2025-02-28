@@ -1,0 +1,47 @@
+body {
+  background-color: #fff !important;
+  color: black !important;
+}
+
+section > div h1 {
+  color: black !important;
+}
+section > div p {
+  color: rgba(0, 0, 0, 0.5803921569);
+}
+section input {
+  border: 2px solid rgba(0, 0, 0, 0.349) !important;
+  border-right: none !important;
+}
+
+.box {
+  background: #eee;
+  box-shadow: 0px 4px 9px 2px rgba(0, 0, 0, 0.0392156863) !important;
+}
+
+.box a {
+  color: #000 !important;
+}
+
+.box p {
+  color: rgba(0, 0, 0, 0.767) !important;
+}
+
+.result {
+  background: #eee !important;
+}
+
+.result a, .result span {
+  color: #000 !important;
+}
+
+.result p {
+  color: rgba(0, 0, 0, 0.6039215686) !important;
+}
+
+footer {
+  background: #eee !important;
+}
+footer p {
+  color: #000 !important;
+}/*# sourceMappingURL=light-mode.css.map */
