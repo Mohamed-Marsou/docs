@@ -55,9 +55,9 @@ nav::after {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: #b92b27;
-  background: linear-gradient(to right, #1565c0, #b92b27);
+  height: 3px;
+  background: #EB5757;
+  background: linear-gradient(to right, #353535, #EB5757);
 }
 nav > div a {
   display: flex;
@@ -67,15 +67,18 @@ nav > div a {
   font-weight: bold;
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, #1565c0, #b92b27);
+  background: linear-gradient(to right, #858383, #EB5757);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+nav > div a span {
+  text-transform: uppercase;
+}
 nav > div img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 5rem;
   -o-object-fit: contain;
      object-fit: contain;
   cursor: pointer;
@@ -118,7 +121,7 @@ section .search h1 {
   font-weight: bolder;
 }
 section .search a {
-  color: #ce1968;
+  color: #EB5757;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -146,7 +149,7 @@ section .search .nav-center > button {
   cursor: pointer;
   border: none;
   outline: none;
-  background: #ce1968;
+  background: #EB5757;
   transition: 0.3s ease-in-out;
 }
 section .search .nav-center > button > img {
@@ -190,7 +193,7 @@ section .search .nav-center .search-result .result {
           user-select: none;
 }
 section .search .nav-center .search-result .result img {
-  background: #ce1968;
+  background: #EB5757;
   width: 2.5rem;
   padding: 5px;
   border-radius: 5px;
@@ -227,10 +230,11 @@ section .versions-box > .box {
   width: 22rem;
   height: 14rem;
   margin: 1rem;
-  box-shadow: 0px 4px 9px 2px rgba(255, 255, 255, 0.0352941176);
+  box-shadow: 0px 4px 9px 2px rgba(255, 255, 255, 0.0274509804);
   border-radius: 10px;
   padding: 1rem;
   transition: 0.9s ease-in-out;
+  background: #1a1919;
 }
 section .versions-box > .box:hover {
   transform: scale(1.03);
@@ -238,7 +242,7 @@ section .versions-box > .box:hover {
 section .versions-box > .box > div {
   width: 70px;
   height: 70px;
-  background: #ce1968;
+  background: #EB5757;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -267,7 +271,7 @@ footer {
   margin: 2rem auto 0 auto;
 }
 footer span {
-  background: linear-gradient(90deg, #1565c0, #b92b27, #1565c0);
+  background: linear-gradient(90deg, #cacaca, #EB5757, #f30303);
   background-size: 200% auto;
   color: transparent;
   background-clip: text;

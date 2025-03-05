@@ -123,3 +123,5 @@ searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim().toLowerCase();
     searchDocumentation(query);
 });
+
+
